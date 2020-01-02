@@ -2,7 +2,8 @@
 I have written a function for spatial filtering which has the following syntax, with only 'f' and 'w' as mandatory input arguments, g=imfilter_rollno(f, w, filtering_mode, boundary_options, size_options) where 'f' is the input image, 'g' is the filtered result, and the other parameters are summarized below.
 The filtering mode is specified as 'corr' for correlation (this is kept as default) or as 'conv' for convolution. The boundary options deal with the border-padding issue, and the size of the filter determines the size of the border. The size options are either 'same' (default) or 'full.' 
 
-#Aim: 
+Aim: 
+
 The output of the code written in Python (imfilter17110150) should be somewhat similar to that of the in-built function present in MATLAB (imfilter). 
 
 First of all, RGB input image is converted into its grayscale form. Then, for any of the size options chosen, same boundary is applied to the input image (m ∗ n) such that the output image remains of the same size as the input image is. Here, I have considered only the square matrix kernel to make it less complicated. For a kernel matrix of size (2k+1), (2k) rows and columns are added to the input matrix. For obtaining diﬀerent boundary conditions, I took an array of dimension (m+2k)∗(n+2k) with all its elements equal to 0 named as 'padded_f.' Then, in the middle, skipping 2k rows and columns, the input matrix is placed, and the following operations are carried out for diﬀerent boundary options:
