@@ -27,7 +27,7 @@ Size Options
 
 Now, convolution or correlation is carried out on the 'padded_f' matrix, depending upon the filtering mode given by the user.
 
-#Parameters Chosen 
+Parameters Chosen 
 
 • f: Input Image represented as 2D matrix
 
